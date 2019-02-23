@@ -14,4 +14,4 @@ learning rate=0.03 and 10000 epochs,
 ![alt text](https://github.com/dniboghgnis/Logistic-regression/blob/master/accuracy2:03.png)
 
 
-The sample output values are in the *.txt files. Names are self-explanatory. 
+The sample output values are in the *.txt files. Names and codes are well commented/described, and are self-explanatory. 
