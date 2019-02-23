@@ -97,9 +97,9 @@ learningRate = tf.train.exponential_decay(learning_rate=0.005,
                                           staircase=True)
 
 
-learning_rate=0.003
+learning_rate=0.03
 batch_size=30
-iter_num=1200
+iter_num=10000
 
 optimizer=tf.train.GradientDescentOptimizer(learning_rate)
 training_op=optimizer.minimize(cost)
@@ -151,7 +151,8 @@ for epoch in range(iter_num):
     train_acc.append(temp_train_acc)
     test_acc.append(temp_test_acc)
     # output
-    print('epoch: {:4d} loss: {:5f} train_acc: {:5f} test_acc: {:5f}'.format(epoch + 1, temp_loss,
+    if epoch%10==0:
+        print('epoch: {:4d} loss: {:5f} train_acc: {:5f} test_acc: {:5f}'.format(epoch + 1, temp_loss,
                                                                           temp_train_acc, temp_test_acc))
 
 # Visualization of the results
